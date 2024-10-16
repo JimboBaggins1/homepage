@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    border: 1px solid black;
+    /* height: 200px; */
+    min-width: 300px;
+    flex-basis: 30%;
+}
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

@@ -56,6 +56,18 @@ module.exports = {
                     },
                 },
             },
+            // {
+            //     test: /\.(jpe?g|png|gif|svg|ico)$/i,
+            //     use: {
+            //         loader: 'file-loader',
+            //     }
+            // },
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                }
+            }
         ],
     },
 };

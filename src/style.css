@@ -1,17 +1,136 @@
+@font-face {
+    font-family: 'PlayFair';
+    src: url('PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.ttf') format('truetype');
+}
+:root {
+    --blueish: rgb(14, 133, 192);
+}
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    font-family: 'PlayFair';
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+h3 {
+    display: flex;
+    font-size: 1.8rem;
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    margin: 10px;
+}
+
+header, main, footer {
+    flex: 1;
+}
+
+div.text-container {
+    padding: 1rem;
+}
+
+#about {
+    background: linear-gradient(174deg, var(--blueish) 47%, white 47.5%);
+}
+
+#about figure img, .card {
+    box-shadow: 4px 4px 17px -3px rgba(0,0,0,0.48);
+}
+
+figure {
+    max-width: 300px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.79);
 }
 
 .card {
     border: 1px solid black;
-    /* height: 200px; */
     min-width: 300px;
     flex-basis: 30%;
 }
 
-div.container {
+.card > img {
+    min-width: 100%;
+}
+
+.card .card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6rem;
+}
+
+.card .card-header img {
+    width: 1.8rem;
+}
+
+div.img-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+div.img-container > img {
+    width: 30px;
+}
+
+div.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+
+/* div.card-container > .card > p {
+    padding: 10px 30px;
+} */
+
+footer {
+    color: white;
+    background-color: var(--blueish);
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+@media (max-width: 400px) {
+    figure {
+        max-width: 250px;
+    }
 }
